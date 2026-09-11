@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>For Thatha — Twenty-Two Years</title>
+<meta name="description" content="A private five-chapter tribute for JeanPierre — our Thatha — twenty-two years of guidance, France, India, family and gratitude.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1B2E;
+  --blue:#1F3A5F;
+  --blue-soft:#3F5C82;
+  --ivory:#F6F2E9;
+  --paper:#FBF8F2;
+  --white:#FFFFFF;
+  --burgundy:#7A2432;
+  --burgundy-soft:#9B4351;
+  --saffron:#C87F3A;
+  --india-green:#2E5E45;
+  --line:rgba(15,27,46,0.14);
+  --line-light:rgba(255,255,255,0.2);
+  --ink:#161C24;
+  --ink-soft:#4A5261;
+  --serif:'Fraunces',serif;
+  --sans:'Inter',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--sans);
+  background:var(--navy);
+  color:var(--ink);
+  overflow:hidden;
+  width:100%;height:100%;
+  -webkit-font-smoothing:antialiased;
+  position:fixed;inset:0;
+}
+img{max-width:100%;display:block;}
+button{font-family:inherit;}
+::selection{background:var(--burgundy);color:var(--white);}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
+}
+.rail{max-width:720px;margin:0 auto;padding:0 22px;}
+@media(min-width:768px){.rail{padding:0 56px;max-width:840px;}}
+.eyebrow{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;font-weight:500;}
+
+#preloader{position:fixed;inset:0;z-index:500;background:var(--navy);display:flex;align-items:center;justify-content:center;
+  transition:opacity 0.95s var(--ease), visibility 0.95s var(--ease);}
+#preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.pl-ring{position:absolute;width:150px;height:150px;border-radius:50%;border:1px solid rgba(246,242,233,0.12);animation:plSpin 3.4s linear infinite;}
+.pl-ring::before{content:'';position:absolute;top:-3px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--burgundy-soft);box-shadow:0 0 10px rgba(155,67,81,0.85);}
+.pl-ring2{position:absolute;width:190px;height:190px;border-radius:50%;border:1px solid rgba(246,242,233,0.06);animation:plSpin 5s linear infinite reverse;}
+@keyframes plSpin{to{transform:rotate(360deg);}}
+.pl-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 30px;}
+.pl-mark{width:52px;height:52px;border-radius:50%;border:1px solid rgba(246,242,233,0.4);display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ivory);margin-bottom:18px;}
+.pl-eyebrow{font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(246,242,233,0.55);margin-bottom:26px;}
+.pl-bar-wrap{width:190px;height:2px;background:rgba(246,242,233,0.15);border-radius:2px;overflow:hidden;}
+.pl-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--blue-soft),var(--ivory) 55%,var(--burgundy-soft));transition:width 2s cubic-bezier(0.4,0,0.2,1);}
+.pl-tagline{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(246,242,233,0.5);min-height:18px;}
+
+#gate{
+  position:fixed;inset:0;z-index:300;
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1s var(--ease), visibility 1s var(--ease);
+  overflow:hidden;
+  background:linear-gradient(165deg, #12213C 0%, #0F1B2E 55%, #170D12 100%);
+}
+#gate.leaving{opacity:0;visibility:hidden;}
+.gate-grain{position:absolute;inset:0;opacity:0.5;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size:46px 46px;}
+.gate-glow{position:absolute;width:70vw;height:70vw;max-width:520px;max-height:520px;border-radius:50%;
+  background:radial-gradient(circle, rgba(122,36,50,0.22) 0%, transparent 65%);
+  top:-8%;right:-18%;pointer-events:none;}
+.gate-inner{position:relative;z-index:2;width:100%;padding:24px 22px calc(30px + var(--safe-b));text-align:center;color:var(--ivory);}
+.gate-portrait{margin:0 auto 20px;width:112px;height:112px;position:relative;}
+.gate-portrait-ring{
+  width:100%;height:100%;border-radius:50%;overflow:hidden;
+  border:1px solid rgba(246,242,233,0.4);
+  box-shadow:0 0 0 5px rgba(246,242,233,0.06), 0 10px 30px rgba(0,0,0,0.4);
+  position:relative;background:var(--navy);
+}
+.gate-portrait-ring img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(0.95) brightness(0.97);}
+.gate-portrait-ring .ph-fallback{
+  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#1F3A5F,#0F1B2E 60%);color:rgba(246,242,233,0.45);
+}
+.gate-portrait-ring .ph-fallback span{font-family:var(--serif);font-style:italic;font-size:14px;}
+.gate-eyebrow{font-size:10.5px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(246,242,233,0.6);margin-bottom:10px;}
+.gate-title{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(24px,7vw,32px);line-height:1.18;margin-bottom:8px;}
+.gate-sub{font-size:13.5px;line-height:1.6;color:rgba(246,242,233,0.65);max-width:280px;margin:0 auto 24px;font-weight:300;}
+.gate-dots{display:flex;gap:13px;justify-content:center;margin-bottom:20px;}
+.gate-dot{width:9px;height:9px;border-radius:50%;border:1px solid rgba(246,242,233,0.5);transition:all 0.3s var(--ease);}
+.gate-dot.filled{background:var(--burgundy-soft);border-color:var(--burgundy-soft);}
+.gate-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;max-width:250px;margin:0 auto;}
+.gate-key{
+  aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(246,242,233,0.25);
+  background:rgba(15,27,46,0.35);
+  backdrop-filter:blur(6px);
+  color:var(--ivory);
+  font-family:var(--serif);font-size:18px;font-weight:400;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s var(--ease);
+  min-height:48px;
+}
+.gate-key:active{transform:scale(0.92);background:rgba(122,36,50,0.4);border-color:rgba(122,36,50,0.6);}
+.gate-key.ghost{border:none;background:transparent;pointer-events:none;}
+.gate-key.del{font-family:var(--sans);font-size:12px;letter-spacing:0.5px;color:rgba(246,242,233,0.65);}
+.gate-error{margin-top:16px;font-size:11.5px;letter-spacing:1px;color:#E8A0A8;opacity:0;transition:opacity 0.3s ease;font-style:italic;}
+.gate-error.show{opacity:1;}
+@keyframes gateShake{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-6px);}40%,80%{transform:translateX(6px);}}
+.shake{animation:gateShake 0.36s ease;}
+
+#app{position:fixed;inset:0;opacity:0;visibility:hidden;transition:opacity 1.1s var(--ease) 0.1s;}
+#app.revealed{opacity:1;visibility:visible;}
+
+.top-chrome{
+  position:fixed;top:0;left:0;right:0;z-index:40;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:calc(14px + var(--safe-t)) 20px 12px;
+  pointer-events:none;
+}
+.top-mark{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(246,242,233,0.45);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-style:italic;font-size:12px;color:var(--ivory);
+  background:rgba(15,27,46,0.25);backdrop-filter:blur(6px);
+  pointer-events:auto;
+}
+.top-progress{
+  font-size:10.5px;letter-spacing:2px;color:rgba(246,242,233,0.75);
+  background:rgba(15,27,46,0.25);backdrop-filter:blur(6px);
+  border:1px solid rgba(246,242,233,0.2);
+  padding:6px 12px;border-radius:20px;
+  pointer-events:auto;
+}
+.top-progress b{color:var(--ivory);font-weight:500;}
+
+.pages-viewport{position:fixed;inset:0;}
+.page{
+  position:absolute;inset:0;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(14px);
+  transition:opacity 0.55s var(--ease), transform 0.55s var(--ease), visibility 0.55s;
+}
+.page.active{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);}
+.page-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.page-content{position:relative;z-index:2;min-height:100%;display:flex;flex-direction:column;justify-content:center;
+  padding:calc(84px + var(--safe-t)) 0 120px;}
+
+.scrim-top{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,27,46,0.55) 0%, rgba(15,27,46,0.15) 30%, rgba(15,27,46,0.55) 75%, rgba(15,27,46,0.85) 100%);}
+
+.on-dark{color:var(--ivory);}
+.on-dark .eyebrow{color:var(--burgundy-soft);}
+.on-dark h1, .on-dark h2{color:var(--ivory);font-family:var(--serif);font-weight:400;}
+.on-dark p{color:rgba(246,242,233,0.75);font-weight:300;}
+
+.chapter-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  padding:12px 18px calc(14px + var(--safe-b));
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:linear-gradient(180deg, transparent, rgba(15,27,46,0.55) 40%, rgba(15,27,46,0.78));
+  backdrop-filter:blur(8px);
+}
+.nav-arrow{
+  width:40px;height:40px;border-radius:50%;flex:0 0 auto;
+  border:1px solid rgba(246,242,233,0.3);
+  background:rgba(246,242,233,0.06);
+  color:var(--ivory);font-size:16px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:opacity 0.2s ease, transform 0.15s ease;
+}
+.nav-arrow:active{transform:scale(0.9);}
+.nav-arrow[disabled]{opacity:0.25;pointer-events:none;}
+.nav-dots{display:flex;gap:9px;align-items:center;}
+.nav-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(246,242,233,0.3);
+  border:none;cursor:pointer;padding:0;
+  transition:all 0.3s var(--ease);
+}
+.nav-dot.active{background:var(--ivory);width:22px;border-radius:5px;}
+.nav-label{position:absolute;left:50%;top:-22px;transform:translateX(-50%);
+  font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(246,242,233,0.5);white-space:nowrap;}
+
+.cta-continue{
+  margin-top:40px;display:inline-flex;align-items:center;gap:10px;
+  background:none;border:1px solid rgba(246,242,233,0.35);color:var(--ivory);
+  padding:13px 26px;border-radius:30px;font-size:13px;letter-spacing:1.5px;
+  cursor:pointer;transition:all 0.25s var(--ease);text-transform:uppercase;
+}
+.cta-continue:active{transform:scale(0.96);background:rgba(246,242,233,0.08);}
+
+.section-head{margin-bottom:38px;}
+.section-head .eyebrow{margin-bottom:12px;display:block;}
+.section-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,7vw,40px);line-height:1.14;}
+.section-head p{margin-top:14px;font-size:14.5px;line-height:1.75;max-width:480px;font-weight:300;}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.85s var(--ease), transform 0.85s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+
+.framed-photo{margin:30px 0;}
+.framed-photo .frame{
+  border:1px solid rgba(246,242,233,0.35);
+  padding:8px;background:rgba(15,27,46,0.25);backdrop-filter:blur(4px);
+  max-width:300px;
+}
+.framed-photo .frame img{width:100%;aspect-ratio:4/5;object-fit:cover;cursor:pointer;}
+.framed-photo .cap{margin-top:10px;font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(246,242,233,0.6);}
+.framed-photo .ph-fallback{width:100%;aspect-ratio:4/5;display:none;align-items:center;justify-content:center;background:rgba(246,242,233,0.05);color:rgba(246,242,233,0.3);font-family:var(--serif);font-style:italic;font-size:12px;}
+
+.mini-tl{display:flex;flex-direction:column;gap:0;border-left:1px solid rgba(246,242,233,0.25);padding-left:22px;margin:8px 0 34px;}
+.mini-tl-item{padding-bottom:22px;position:relative;}
+.mini-tl-item:last-child{padding-bottom:0;}
+.mini-tl-item::before{content:'';position:absolute;left:-27px;top:5px;width:7px;height:7px;border-radius:50%;background:var(--burgundy-soft);}
+.mini-tl-item b{font-family:var(--serif);font-weight:500;font-size:15px;color:var(--ivory);display:block;margin-bottom:2px;}
+.mini-tl-item span{font-size:12.5px;color:rgba(246,242,233,0.55);font-weight:300;}
+
+.mlist{display:flex;flex-direction:column;gap:22px;margin-top:6px;}
+.mlist-item{border-top:1px solid rgba(246,242,233,0.18);padding-top:18px;}
+.mlist-item .idx{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--burgundy-soft);display:block;margin-bottom:6px;}
+.mlist-item h3{font-family:var(--serif);font-weight:400;font-size:18px;margin-bottom:6px;color:var(--ivory);}
+.mlist-item p{font-size:13.5px;line-height:1.7;color:rgba(246,242,233,0.65);font-weight:300;}
+
+.trip-scroller{display:flex;gap:12px;overflow-x:auto;padding:4px 22px 10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -22px;}
+.trip-scroller::-webkit-scrollbar{display:none;}
+.trip-card{flex:0 0 auto;width:min(72vw,250px);scroll-snap-align:start;border:1px solid rgba(246,242,233,0.2);background:rgba(15,27,46,0.3);backdrop-filter:blur(4px);padding:20px 18px;}
+.trip-card .idx{font-family:var(--serif);font-style:italic;color:var(--burgundy-soft);font-size:12px;display:block;margin-bottom:10px;}
+.trip-card h3{font-family:var(--serif);font-weight:400;font-size:17px;margin-bottom:8px;color:var(--ivory);}
+.trip-card p{font-size:12.5px;line-height:1.7;color:rgba(246,242,233,0.6);font-weight:300;}
+
+.wish-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px;}
+.wish-card{border:1px solid rgba(246,242,233,0.2);padding:20px 20px;background:rgba(15,27,46,0.25);backdrop-filter:blur(4px);}
+.wish-card .fr{font-family:var(--serif);font-style:italic;color:var(--burgundy-soft);font-size:16px;margin-bottom:8px;display:block;}
+.wish-card p{font-size:13.5px;line-height:1.7;color:rgba(246,242,233,0.7);font-weight:300;}
+
+.years100{margin:36px 0;padding:26px 22px;border:1px solid rgba(246,242,233,0.28);background:rgba(122,36,50,0.14);text-align:center;}
+.years100 .num{font-family:var(--serif);font-style:italic;font-size:clamp(38px,12vw,56px);color:var(--ivory);line-height:1;}
+.years100 p{margin-top:10px;font-size:14px;line-height:1.75;color:rgba(246,242,233,0.78);font-weight:300;}
+
+.moments-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:8px 0 34px;}
+@media(min-width:600px){.moments-grid{grid-template-columns:repeat(3,1fr);}}
+.m-item{position:relative;overflow:hidden;aspect-ratio:1/1;background:var(--navy);border:1px solid rgba(246,242,233,0.12);cursor:pointer;}
+.m-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s var(--ease);}
+@media(hover:hover){.m-item:hover img{transform:scale(1.06);}}
+.m-item .ph-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(246,242,233,0.04);color:rgba(246,242,233,0.3);font-family:var(--serif);font-style:italic;font-size:11px;text-align:center;padding:8px;}
+.m-item.big{grid-column:span 2;aspect-ratio:16/11;}
+
+.cake-zone{display:flex;flex-direction:column;align-items:center;margin:44px 0 10px;position:relative;}
+.cake-msg{font-family:var(--serif);font-style:italic;font-size:clamp(20px,5.5vw,28px);color:var(--ivory);text-align:center;margin-bottom:28px;opacity:0;transition:opacity 0.8s ease;}
+.cake-msg.show{opacity:1;}
+.cake{display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 14px 34px rgba(0,0,0,0.4));}
+.candles{display:flex;gap:16px;margin-bottom:2px;align-items:flex-end;}
+.candle{width:5px;height:30px;background:linear-gradient(180deg,#F6F2E9,#D8CDBB);border-radius:2px;position:relative;}
+.candle::after{
+  content:'';position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  width:10px;height:16px;border-radius:50% 50% 30% 30%;
+  background:radial-gradient(ellipse at bottom, #F5D97A, #C87F3A 55%, transparent);
+  opacity:0;transition:opacity 0.4s ease;
+}
+.cake.lit .candle::after{opacity:1;animation:flicker 0.18s ease-in-out infinite alternate;}
+@keyframes flicker{0%{transform:translateX(-50%) scaleY(1) scaleX(1);}100%{transform:translateX(-50%) scaleY(0.88) scaleX(1.1) rotate(2deg);}}
+.cake-tier-top{width:92px;height:34px;background:linear-gradient(180deg,#F6F2E9,#E4DBC9);border-radius:46% 46% 4px 4px / 60% 60% 4px 4px;border:1px solid rgba(15,27,46,0.08);position:relative;}
+.cake-tier-top::after{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--blue),var(--burgundy));border-radius:46% 46% 0 0 / 60% 60% 0 0;opacity:0.7;}
+.cake-tier-bottom{width:132px;height:48px;margin-top:-2px;background:linear-gradient(180deg,#EFE6D3,#DED0B6);border-radius:6px 6px 10px 10px;border:1px solid rgba(15,27,46,0.08);position:relative;overflow:hidden;}
+.cake-tier-bottom::before{content:'';position:absolute;left:0;right:0;bottom:8px;height:1px;background:repeating-linear-gradient(90deg, var(--burgundy) 0 8px, transparent 8px 16px);opacity:0.5;}
+.cake-plate{width:158px;height:6px;background:rgba(246,242,233,0.25);border-radius:50%;margin-top:3px;}
+.cake-cta{margin-top:26px;background:linear-gradient(135deg,var(--blue),var(--burgundy));color:var(--ivory);border:none;padding:13px 28px;border-radius:30px;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:transform 0.2s ease;}
+.cake-cta:active{transform:scale(0.95);}
+.cake-cta[hidden]{display:none;}
+#confettiHost{position:fixed;inset:0;pointer-events:none;z-index:60;}
+.confetti-piece{position:absolute;top:-14px;border-radius:1px;animation:confettiFall linear forwards;}
+@keyframes confettiFall{to{transform:translateY(110vh) rotate(400deg);opacity:0.2;}}
+
+.gen-mobile-layer{position:absolute;inset:0;display:block;}
+.gen-mobile-layer img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+.gen-mobile-layer .ph-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(15,27,46,0.3);color:rgba(246,242,233,0.4);font-family:var(--serif);font-style:italic;font-size:13px;text-align:center;padding:20px;}
+.gen-desktop-layer{position:absolute;inset:0;display:none;}
+.gen-desktop-layer .blur-fill{position:absolute;inset:-30px;background-size:cover;background-position:center;
+  filter:blur(38px) saturate(1.05) brightness(0.5);transform:scale(1.2);}
+.gen-desktop-layer img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:auto;height:104%;max-width:none;object-fit:contain;box-shadow:0 40px 120px rgba(0,0,0,0.55);display:block;}
+.gen-desktop-layer .ph-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(15,27,46,0.3);color:rgba(246,242,233,0.4);font-family:var(--serif);font-style:italic;font-size:13px;text-align:center;padding:20px;}
+@media(min-width:820px){
+  .gen-mobile-layer{display:none;}
+  .gen-desktop-layer{display:block;}
+}
+.tricolor-tint{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(100deg, rgba(31,58,95,0.4) 0%, transparent 35%, transparent 65%, rgba(122,36,50,0.34) 100%);}
+
+.svg-layer{position:absolute;inset:0;width:100%;height:100%;}
+.svg-layer svg{width:100%;height:100%;}
+
+.bg-p1{background:linear-gradient(135deg, #10203A 0%, #1B3157 38%, #F3EEE2 52%, #6E1F2C 68%, #3B0F17 100%);}
+.bg-p1::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 20% 15%, rgba(31,58,95,0.5), transparent 55%),
+             radial-gradient(ellipse at 82% 85%, rgba(122,36,50,0.55), transparent 55%);
+}
+.bg-p1 .grain{position:absolute;inset:0;opacity:0.5;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size:46px 46px;}
+.bg-p1 .hairline{position:absolute;top:0;bottom:0;width:1px;background:rgba(246,242,233,0.18);}
+
+.bg-p2{background:linear-gradient(160deg, #C87F3A 0%, #7A5A33 18%, #24314A 46%, #1F3A5F 62%, #6E1F2C 88%, #3B0F17 100%);}
+.bg-p2::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 15% 10%, rgba(200,127,58,0.45), transparent 50%),
+             radial-gradient(ellipse at 85% 20%, rgba(46,94,69,0.35), transparent 45%),
+             radial-gradient(ellipse at 75% 90%, rgba(122,36,50,0.5), transparent 55%);
+}
+
+.bg-p3{background:linear-gradient(180deg,#0C1930 0%, #1B3157 45%, #3E4E6B 72%, #7A5B54 100%);}
+.bg-p3 .sky-glow{position:absolute;bottom:28%;left:50%;transform:translateX(-50%);width:60%;height:26%;
+  background:radial-gradient(ellipse, rgba(233,177,120,0.35), transparent 70%);}
+
+.bg-p4{background:#0A1526;}
+.bg-p4-photo{position:absolute;inset:0;overflow:hidden;}
+
+.p4-mobile-layer{position:absolute;inset:0;display:block;}
+.p4-mobile-layer img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+.p4-mobile-layer .ph-fallback{
+  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#0A1526 0%,#1A2E4A 45%,#3B2338 78%,#5C1F2A 100%);
+  color:rgba(246,242,233,0.35);font-family:var(--serif);font-style:italic;font-size:14px;
+}
+
+.p4-desktop-layer{position:absolute;inset:0;display:none;}
+.p4-desktop-layer .blur-fill{
+  position:absolute;inset:-30px;
+  background-size:cover;background-position:center;
+  filter:blur(38px) saturate(1.05) brightness(0.5);
+  transform:scale(1.2);
+}
+.p4-desktop-layer img{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:auto;height:104%;max-width:none;
+  object-fit:contain;
+  box-shadow:0 40px 120px rgba(0,0,0,0.55);
+  display:block;
+}
+.p4-desktop-layer .ph-fallback{
+  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#0A1526 0%,#1A2E4A 45%,#3B2338 78%,#5C1F2A 100%);
+  color:rgba(246,242,233,0.35);font-family:var(--serif);font-style:italic;font-size:14px;
+}
+@media(min-width:820px){
+  .p4-mobile-layer{display:none;}
+  .p4-desktop-layer{display:block;}
+}
+.bg-p4 .sky-glow{position:absolute;bottom:22%;left:50%;transform:translateX(-50%);width:55%;height:30%;
+  background:radial-gradient(ellipse, rgba(155,67,81,0.3), transparent 70%);pointer-events:none;z-index:1;}
+
+.bg-p5{background:linear-gradient(180deg,#12243D 0%,#2C4A5E 40%,#C4855F 78%,#E8B583 100%);}
+.bg-p5 .sky-glow{position:absolute;bottom:30%;left:20%;width:60%;height:30%;
+  background:radial-gradient(ellipse, rgba(232,181,131,0.5), transparent 70%);}
+
+.skyline-svg{position:absolute;bottom:0;left:0;right:0;width:100%;opacity:0.9;}
+
+.chapter-foot-sign{margin-top:44px;font-family:var(--serif);font-style:italic;color:rgba(246,242,233,0.55);font-size:13px;}
+
+#musicToggle{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(246,242,233,0.45);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:var(--ivory);
+  background:rgba(15,27,46,0.25);backdrop-filter:blur(6px);
+  pointer-events:auto;cursor:pointer;
+  transition:transform 0.15s ease, background 0.2s ease;
+}
+#musicToggle:active{transform:scale(0.9);}
+#musicToggle.muted{color:rgba(246,242,233,0.45);}
+
+.on-dark .chapter-eyebrow{color:var(--saffron);}
+</style>
+</head>
+<body>
+
+<video id="bgMusic" src="./bg.mp3" loop playsinline preload="auto"
+  style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;"></video>
+
+<div id="preloader">
+  <div class="pl-ring"></div>
+  <div class="pl-ring2"></div>
+  <div class="pl-inner">
+    <div class="pl-mark">Th</div>
+    <div class="pl-eyebrow">Twenty-Two Years</div>
+    <div class="pl-bar-wrap"><div class="pl-bar" id="plBar"></div></div>
+    <div class="pl-tagline" id="plTagline">Preparing something for Thatha…</div>
+  </div>
+</div>
+
+<div id="gate">
+  <div class="gate-grain"></div>
+  <div class="gate-glow"></div>
+  <div class="gate-inner">
+    <div class="gate-portrait">
+      <div class="gate-portrait-ring">
+        <img src="img/1.jpg" alt="" id="gatePhoto" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ph-fallback" id="gatePhotoFallback"><span>Thatha</span></div>
+      </div>
+    </div>
+    <div class="gate-eyebrow">A private page, five chapters</div>
+    <h1 class="gate-title">Something made<br>just for you, Thatha.</h1>
+    <p class="gate-sub">Before it opens — enter the date we always celebrate.</p>
+    <div class="gate-dots">
+      <div class="gate-dot" id="gd1"></div>
+      <div class="gate-dot" id="gd2"></div>
+      <div class="gate-dot" id="gd3"></div>
+      <div class="gate-dot" id="gd4"></div>
+    </div>
+    <div class="gate-pad">
+      <button class="gate-key" data-k="1">1</button>
+      <button class="gate-key" data-k="2">2</button>
+      <button class="gate-key" data-k="3">3</button>
+      <button class="gate-key" data-k="4">4</button>
+      <button class="gate-key" data-k="5">5</button>
+      <button class="gate-key" data-k="6">6</button>
+      <button class="gate-key" data-k="7">7</button>
+      <button class="gate-key" data-k="8">8</button>
+      <button class="gate-key" data-k="9">9</button>
+      <button class="gate-key ghost"></button>
+      <button class="gate-key" data-k="0">0</button>
+      <button class="gate-key del" id="gateDel">EFF</button>
+    </div>
+    <div class="gate-error" id="gateError">That's not quite the date — try again.</div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="top-chrome">
+    <div class="top-mark">Th</div>
+    <div style="display:flex;align-items:center;gap:8px;pointer-events:none;">
+      <div class="top-progress"><b id="pageNumLabel">01</b> / 05 — <span id="pageTitleLabel">Bienvenue</span></div>
+      <button id="musicToggle" aria-label="Toggle music" onclick="toggleMusic()">♪</button>
+    </div>
+  </div>
+
+  <div class="pages-viewport" id="pagesViewport">
+
+    <section class="page active" data-page="1" data-title="Bienvenue">
+      <div class="page-bg bg-p1">
+        <div class="gen-mobile-layer">
+          <img src="img/11.webp" alt="" id="p1PhotoMobile" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph-fallback" id="p1FallbackMobile">A tricolor beginning</div>
+        </div>
+        <div class="gen-desktop-layer">
+          <div class="blur-fill" id="p1BlurFill" style="background-image:url('img/16.png');"></div>
+          <img src="img/16.png" alt="" id="p1PhotoDesktop" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph-fallback" id="p1FallbackDesktop">A tricolor beginning</div>
+        </div>
+        <div class="tricolor-tint"></div>
+        <div class="grain"></div>
+        <div class="hairline" style="left:32%;"></div>
+        <div class="hairline" style="left:68%;"></div>
+        <div class="scrim-top"></div>
+      </div>
+      <div class="page-content">
+        <div class="rail on-dark">
+          <span class="eyebrow chapter-eyebrow reveal">In Loving Tribute, From Your Grandson</span>
+          <h1 class="reveal" style="font-size:clamp(32px,9vw,54px);line-height:1.08;margin:14px 0 16px;">Joyeux anniversaire,<br><em style="font-style:italic;color:var(--burgundy-soft);">Thatha.</em></h1>
+          <p class="reveal" style="font-size:15px;line-height:1.75;max-width:440px;">For twenty-two years, you have been one of the steadiest, most generous presences in our lives — the reason so much of who we are today was even possible. I wanted to put that into something you could hold onto, so here it is: a small journey through those years, Thatha, made just for you by me — Madhavan.</p>
+          <div class="mini-tl reveal" style="margin-top:32px;">
+            <div class="mini-tl-item"><b>22 years</b><span>Since you first became part of our story</span></div>
+            <div class="mini-tl-item"><b>France &amp; India</b><span>Two homes, one family</span></div>
+            <div class="mini-tl-item"><b>Once a year</b><span>And it never feels like enough</span></div>
+          </div>
+          <p class="reveal" style="font-family:var(--serif);font-style:italic;font-size:14px;color:rgba(246,242,233,0.6);margin-top:18px;">— Madhavan, with love</p>
+          <button class="cta-continue reveal" onclick="goToPage(2)">Begin the journey →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="2" data-title="Two Worlds">
+      <div class="page-bg bg-p2">
+        <div class="scrim-top"></div>
+      </div>
+      <div class="page-content">
+        <div class="rail on-dark">
+          <div class="section-head">
+            <span class="eyebrow chapter-eyebrow reveal">Two Worlds, One Family</span>
+            <h2 class="reveal">From school desks<br>to who we are today.</h2>
+            <p class="reveal">Half a world apart, and yet you made yourself as constant in our lives as anyone nearby could have been. This is the story of your guidance — through school, college, and everything since.</p>
+          </div>
+
+          <div class="framed-photo reveal">
+            <div class="frame">
+              <img src="img/2.jpg" alt="A family memory" id="photo2" onclick="openLightbox('img/2.jpg')" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback" id="photo2Fallback">A memory we keep close</div>
+            </div>
+            <div class="cap">A moment that says more than we can write here</div>
+          </div>
+
+          <div class="mlist">
+            <div class="mlist-item reveal">
+              <span class="idx">01</span>
+              <h3>Where your support first began</h3>
+              <p>Long before we understood how much it mattered, you were already choosing to invest in us — in our schooling, our confidence, and our sense that a bigger future was possible.</p>
+            </div>
+            <div class="mlist-item reveal">
+              <span class="idx">02</span>
+              <h3>Fees paid, doors kept open</h3>
+              <p>When it came time for college, you carried costs we couldn't have carried alone, and made continuing our studies possible in ways we're still grateful for.</p>
+            </div>
+            <div class="mlist-item reveal">
+              <span class="idx">03</span>
+              <h3>Guidance beyond the classroom</h3>
+              <p>You never just paid for our education — you took a real interest in it, asked how we were doing, and pushed us gently forward.</p>
+            </div>
+            <div class="mlist-item reveal">
+              <span class="idx">04</span>
+              <h3>Present through difficulty, not just celebration</h3>
+              <p>It is easy to show up for the good days. You showed up for the harder ones too, and that is what we remember most.</p>
+            </div>
+          </div>
+          <button class="cta-continue reveal" onclick="goToPage(3)">Continue to our journeys →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="3" data-title="Memories">
+      <div class="page-bg bg-p3">
+        <div class="gen-mobile-layer">
+          <img src="img/14.jpg" alt="" id="p3PhotoMobile" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph-fallback" id="p3FallbackMobile">A journey we still return to</div>
+        </div>
+        <div class="gen-desktop-layer">
+          <div class="blur-fill" id="p3BlurFill" style="background-image:url('img/13.webp');"></div>
+          <img src="img/13.webp" alt="" id="p3PhotoDesktop" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph-fallback" id="p3FallbackDesktop">A journey we still return to</div>
+        </div>
+        <div class="sky-glow"></div>
+        <div class="scrim-top"></div>
+      </div>
+      <div class="page-content">
+        <div class="rail on-dark">
+          <div class="section-head">
+            <span class="eyebrow chapter-eyebrow reveal">Memories &amp; Journeys</span>
+            <h2 class="reveal">Trips we'll never forget.</h2>
+            <p class="reveal">Family gatherings, tours, and the small, unhurried afternoons — the moments that turned "someone we know" into family.</p>
+          </div>
+
+          <div class="framed-photo reveal">
+            <div class="frame">
+              <img src="img/3.jpg" alt="A trip memory" id="photo3" onclick="openLightbox('img/3.jpg')" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback" id="photo3Fallback">One of the trips we still talk about</div>
+            </div>
+            <div class="cap">Somewhere we went, together</div>
+          </div>
+
+          <div class="trip-scroller reveal">
+            <div class="trip-card">
+              <span class="idx">Voyage 01</span>
+              <h3>A seat at the family table</h3>
+              <p>You welcomed us into family gatherings and celebrations as though we had always belonged there.</p>
+            </div>
+            <div class="trip-card">
+              <span class="idx">Voyage 02</span>
+              <h3>The first trip you planned</h3>
+              <p>The excitement of packing, unfamiliar roads, and you making sure every detail was taken care of.</p>
+            </div>
+            <div class="trip-card">
+              <span class="idx">Voyage 03</span>
+              <h3>Somewhere new, seen through your eyes</h3>
+              <p>You had a way of making even ordinary places feel worth remembering.</p>
+            </div>
+            <div class="trip-card">
+              <span class="idx">Voyage 04</span>
+              <h3>A tradition we hope continues</h3>
+              <p>Each trip added another layer to a bond that already felt like family.</p>
+            </div>
+          </div>
+          <button class="cta-continue reveal" onclick="goToPage(4)">Continue the story →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="4" data-title="22 Years">
+      <div class="page-bg bg-p4">
+        <div class="bg-p4-photo">
+          <div class="p4-mobile-layer">
+            <img src="img/10.jpg" alt="" id="p4PhotoMobile" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ph-fallback" id="p4FallbackMobile">Paris, in our memory</div>
+          </div>
+          <div class="p4-desktop-layer">
+            <div class="blur-fill" id="p4BlurFill" style="background-image:url('img/20.webp');"></div>
+            <img src="img/20.webp" alt="" id="p4PhotoDesktop" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="ph-fallback" id="p4FallbackDesktop">Paris, in our memory</div>
+          </div>
+        </div>
+        <div class="sky-glow"></div>
+        <div class="scrim-top"></div>
+      </div>
+      <div class="page-content">
+        <div class="rail on-dark">
+          <div class="section-head">
+            <span class="eyebrow chapter-eyebrow reveal">Twenty-Two Years of Guidance</span>
+            <h2 class="reveal">How your guidance<br>shaped us.</h2>
+            <p class="reveal">We didn't just receive support from you — we absorbed a way of moving through the world.</p>
+          </div>
+
+          <div class="framed-photo reveal">
+            <div class="frame">
+              <img src="img/4.jpg" alt="A shared memory" id="photo4" onclick="openLightbox('img/4.jpg')" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback" id="photo4Fallback">A quiet moment we still hold onto</div>
+            </div>
+            <div class="cap">You, always steady beside us</div>
+          </div>
+
+          <p class="reveal" style="font-size:15px;line-height:1.85;max-width:460px;margin-bottom:16px;">Patience. Generosity without expectation. The habit of simply showing up. Every time we make a decision with confidence, or extend a kindness without being asked, some part of that traces back to watching you do the same for us.</p>
+          <p class="reveal" style="font-size:15px;line-height:1.85;max-width:460px;">So when we say you're one of the biggest reasons we are where we are today, it isn't a figure of speech. It is simply true.</p>
+
+          <div class="mini-tl reveal" style="margin-top:32px;">
+            <div class="mini-tl-item"><b>School</b><span>Encouragement, quietly given</span></div>
+            <div class="mini-tl-item"><b>College</b><span>Fees paid, futures kept open</span></div>
+            <div class="mini-tl-item"><b>Guidance</b><span>Present in decisions, not just occasions</span></div>
+            <div class="mini-tl-item"><b>Family</b><span>A place kept for us, always</span></div>
+            <div class="mini-tl-item"><b>Trips</b><span>Memories built, one journey at a time</span></div>
+            <div class="mini-tl-item"><b>Today</b><span>Standing on a foundation you helped lay</span></div>
+          </div>
+          <button class="cta-continue reveal" onclick="goToPage(5)">One last chapter →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="5" data-title="Birthday">
+      <div class="page-bg bg-p5">
+        <div class="sky-glow"></div>
+        <svg class="skyline-svg" viewBox="0 0 800 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#12243D" opacity="0.88">
+            <rect x="0" y="90" width="120" height="110"/>
+            <rect x="14" y="105" width="24" height="34" rx="12"/>
+            <rect x="52" y="105" width="24" height="34" rx="12"/>
+            <rect x="90" y="105" width="20" height="34" rx="10"/>
+            <rect x="130" y="70" width="140" height="130"/>
+            <rect x="150" y="88" width="26" height="40" rx="13"/>
+            <rect x="190" y="88" width="26" height="40" rx="13"/>
+            <rect x="230" y="88" width="26" height="40" rx="13"/>
+            <rect x="280" y="100" width="110" height="100"/>
+            <rect x="298" y="118" width="22" height="34" rx="11"/>
+            <rect x="336" y="118" width="22" height="34" rx="11"/>
+            <rect x="400" y="80" width="130" height="120"/>
+            <rect x="418" y="98" width="24" height="38" rx="12"/>
+            <rect x="456" y="98" width="24" height="38" rx="12"/>
+            <rect x="494" y="98" width="24" height="38" rx="12"/>
+            <rect x="540" y="105" width="100" height="95"/>
+            <rect x="556" y="120" width="22" height="34" rx="11"/>
+            <rect x="590" y="120" width="22" height="34" rx="11"/>
+            <rect x="650" y="90" width="150" height="110"/>
+            <rect x="668" y="106" width="24" height="36" rx="12"/>
+            <rect x="706" y="106" width="24" height="36" rx="12"/>
+            <rect x="744" y="106" width="24" height="36" rx="12"/>
+          </g>
+        </svg>
+        <div class="scrim-top"></div>
+      </div>
+      <div class="page-content">
+        <div class="rail on-dark">
+          <div class="section-head">
+            <span class="eyebrow chapter-eyebrow reveal">With Gratitude</span>
+            <h2 class="reveal">Everything, Thatha,<br>comes back to thank you.</h2>
+            <p class="reveal">Thank you for the fees paid quietly, the calls returned promptly, the trips planned generously, and the family gatherings where you always made room for us.</p>
+          </div>
+
+          <div class="framed-photo reveal">
+            <div class="frame">
+              <img src="img/5.jpg" alt="Family together" id="photo5" onclick="openLightbox('img/5.jpg')" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback" id="photo5Fallback">Family, always</div>
+            </div>
+            <div class="cap">This is what twenty-two years looks like</div>
+          </div>
+
+          <p class="reveal" style="font-size:14.5px;line-height:1.8;max-width:460px;">This gratitude isn't for one thing. It's for twenty-two years of them, stacked one on top of another until they became the foundation we stand on.</p>
+
+          <div class="wish-grid reveal">
+            <div class="wish-card">
+              <span class="fr">Joyeux anniversaire, Thatha</span>
+              <p>May this year return to you even a fraction of the care you've given so freely to everyone around you.</p>
+            </div>
+            <div class="wish-card">
+              <span class="fr">Bon anniversaire</span>
+              <p>We hope today is full of the people and moments that make you feel exactly as loved as you are.</p>
+            </div>
+            <div class="wish-card">
+              <span class="fr">Avec toute notre gratitude</span>
+              <p>With all our gratitude, for twenty-two years of guidance, patience, and unwavering support.</p>
+            </div>
+            <div class="wish-card">
+              <span class="fr">Merci du fond du cœur</span>
+              <p>Thank you, from the bottom of our hearts, for shaping our lives in ways we're still discovering.</p>
+            </div>
+          </div>
+
+          <div class="years100 reveal">
+            <div class="num">100</div>
+            <p>We don't just wish you a happy birthday, Thatha — we wish you a hundred more of them: healthy, joyful, and surrounded by family, exactly the way you have always surrounded us. Stay with us for a long, long time yet.</p>
+          </div>
+
+          <div class="section-head reveal" style="margin-bottom:16px;">
+            <span class="eyebrow">Before We Celebrate</span>
+            <h2 style="font-size:clamp(22px,5.5vw,30px);">A few more moments, held close.</h2>
+          </div>
+          <div class="moments-grid reveal">
+            <div class="m-item" onclick="openLightbox('img/1.jpg')">
+              <img src="img/1.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback">Thatha</div>
+            </div>
+            <div class="m-item" onclick="openLightbox('img/2.jpg')">
+              <img src="img/2.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback">Family</div>
+            </div>
+            <div class="m-item" onclick="openLightbox('img/3.jpg')">
+              <img src="img/3.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback">A journey</div>
+            </div>
+            <div class="m-item" onclick="openLightbox('img/4.jpg')">
+              <img src="img/4.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="ph-fallback">A quiet moment</div>
+            </div>
+           <div class="m-item big" onclick="openLightbox('img/5.jpg')">
+  <img src="img/5.jpg" alt="" style="object-position:center 15%;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+  <div class="ph-fallback">Family, always</div>
+</div>
+          </div>
+
+          <div class="cake-zone">
+            <div class="cake-msg" id="cakeMsg"><pre>Happy Birthday, Thatha
+                                           With love, your lovable Madhavan</pre></div>
+            <div class="cake" id="cakeEl">
+              <div class="candles"><div class="candle"></div><div class="candle"></div><div class="candle"></div><div class="candle"></div><div class="candle"></div></div>
+              <div class="cake-tier-top"></div>
+              <div class="cake-tier-bottom"></div>
+              <div class="cake-plate"></div>
+            </div>
+            <button class="cake-cta" id="lightBtn" onclick="lightCandles()">✦ Light the Candles ✦</button>
+          </div>
+
+          <div class="chapter-foot-sign reveal">With respect, love, and endless gratitude — always yours.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-arrow" id="prevBtn" onclick="goToPage(currentPage-1)" aria-label="Previous chapter">&#8249;</button>
+    <div class="nav-dots" id="navDots"></div>
+    <button class="nav-arrow" id="nextBtn" onclick="goToPage(currentPage+1)" aria-label="Next chapter">&#8250;</button>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" style="position:fixed;inset:0;background:rgba(15,27,46,0.96);z-index:400;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 0.4s ease, visibility 0.4s ease;padding:20px;">
+  <button id="lbClose" style="position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(246,242,233,0.3);background:rgba(246,242,233,0.06);color:#F6F2E9;font-size:18px;cursor:pointer;">&times;</button>
+  <img id="lbImg" src="" alt="Memory" style="max-width:100%;max-height:82vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+</div>
+
+<script>
+(function(){
+  const music = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicToggle');
+  if(!music || !btn) return;
+
+  const VOL_KEY = 'thathaSite_musicVolume';
+  const ON_KEY = 'thathaSite_musicOn';
+
+  const savedVol = parseFloat(localStorage.getItem(VOL_KEY));
+  music.volume = isNaN(savedVol) ? 0.22 : savedVol;
+  let musicOn = localStorage.getItem(ON_KEY) !== 'off';
+
+  function setIcon(){
+    btn.textContent = musicOn ? '♪' : '♪';
+    btn.classList.toggle('muted', !musicOn || music.paused);
+  }
+
+  function tryPlay(){
+    if(!musicOn) return;
+    const p = music.play();
+    if(p && typeof p.catch === 'function'){
+      p.then(()=>{ setIcon(); }).catch(()=>{
+        const resume = ()=>{
+          if(musicOn) music.play().then(setIcon).catch(()=>{});
+          document.removeEventListener('click', resume);
+          document.removeEventListener('touchstart', resume);
+          document.removeEventListener('keydown', resume);
+        };
+        document.addEventListener('click', resume, {once:true});
+        document.addEventListener('touchstart', resume, {once:true});
+        document.addEventListener('keydown', resume, {once:true});
+      });
+    }
+    setIcon();
+  }
+
+  music.addEventListener('ended', ()=>{
+    music.currentTime = 0;
+    if(musicOn) music.play().catch(()=>{});
+  });
+
+  window.toggleMusic = function(){
+    musicOn = !musicOn;
+    localStorage.setItem(ON_KEY, musicOn ? 'on' : 'off');
+    if(musicOn){
+      music.play().catch(()=>{});
+    } else {
+      music.pause();
+    }
+    setIcon();
+  };
+
+  music.addEventListener('play', setIcon);
+  music.addEventListener('pause', setIcon);
+
+  setIcon();
+  tryPlay();
+})();
+
+(function(){
+  const preloader = document.getElementById('preloader');
+  const plBar = document.getElementById('plBar');
+  const plTagline = document.getElementById('plTagline');
+  const lines = ['Preparing something for Thatha…','Gathering twenty-two years…','Almost there…'];
+  let li = 0;
+  const tag = setInterval(()=>{
+    li = (li+1) % lines.length;
+    if(plTagline) plTagline.textContent = lines[li];
+  }, 900);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if(plBar) plBar.style.width = '100%';
+  }));
+  setTimeout(()=>{
+    clearInterval(tag);
+    preloader.classList.add('hide');
+    setTimeout(()=>{ preloader.style.display='none'; }, 980);
+  }, 2500);
+})();
+
+(function(){
+  const CORRECT = '1209';
+  let code = '';
+  const dots = [1,2,3,4].map(n=>document.getElementById('gd'+n));
+  const gate = document.getElementById('gate');
+  const app = document.getElementById('app');
+  const errEl = document.getElementById('gateError');
+  const dotsRow = document.querySelector('.gate-dots');
+
+  function updateDots(){ dots.forEach((d,i)=>d.classList.toggle('filled', i < code.length)); }
+  function press(v){
+    if(code.length >= 4) return;
+    code += v; updateDots();
+    if(code.length === 4) setTimeout(check, 180);
+  }
+  function del(){ code = code.slice(0,-1); updateDots(); }
+  function check(){
+    if(code === CORRECT){
+      errEl.classList.remove('show');
+      gate.classList.add('leaving');
+      setTimeout(()=>{ gate.style.display='none'; }, 1050);
+      app.classList.add('revealed');
+      initScrollReveal();
+    } else {
+      errEl.classList.add('show');
+      dotsRow.classList.add('shake');
+      setTimeout(()=>dotsRow.classList.remove('shake'), 380);
+      code = '';
+      setTimeout(updateDots, 90);
+    }
+  }
+  document.querySelectorAll('.gate-key[data-k]').forEach(btn=>btn.addEventListener('click', ()=>press(btn.dataset.k)));
+  document.getElementById('gateDel').addEventListener('click', del);
+  document.addEventListener('keydown', (e)=>{
+    if(gate.style.display==='none') return;
+    if(/^[0-9]$/.test(e.key)) press(e.key);
+    if(e.key==='Backspace') del();
+  });
+})();
+
+const TOTAL_PAGES = 5;
+let currentPage = 1;
+const pages = Array.from(document.querySelectorAll('.page'));
+const navDots = document.getElementById('navDots');
+const pageNumLabel = document.getElementById('pageNumLabel');
+const pageTitleLabel = document.getElementById('pageTitleLabel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+for(let i=1;i<=TOTAL_PAGES;i++){
+  const dot = document.createElement('button');
+  dot.className = 'nav-dot' + (i===1?' active':'');
+  dot.setAttribute('aria-label','Go to chapter '+i);
+  dot.addEventListener('click', ()=>goToPage(i));
+  navDots.appendChild(dot);
+}
+
+function goToPage(n){
+  if(n < 1 || n > TOTAL_PAGES || n === currentPage) return;
+  const cur = pages.find(p=>+p.dataset.page === currentPage);
+  const next = pages.find(p=>+p.dataset.page === n);
+  cur.classList.remove('active');
+  next.classList.remove('active');
+  next.scrollTop = 0;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    next.classList.add('active');
+  }));
+  currentPage = n;
+  pageNumLabel.textContent = String(n).padStart(2,'0');
+  pageTitleLabel.textContent = next.dataset.title;
+  Array.from(navDots.children).forEach((d,i)=>d.classList.toggle('active', i === n-1));
+  prevBtn.disabled = n === 1;
+  nextBtn.disabled = n === TOTAL_PAGES;
+  revealPageElements(next);
+}
+prevBtn.disabled = true;
+
+(function(){
+  const vp = document.getElementById('pagesViewport');
+  let sx=0, sy=0, tracking=false;
+  vp.addEventListener('touchstart', (e)=>{
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY; tracking = true;
+  }, {passive:true});
+  vp.addEventListener('touchend', (e)=>{
+    if(!tracking) return; tracking = false;
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if(Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)*1.4){
+      if(dx < 0) goToPage(currentPage+1); else goToPage(currentPage-1);
+    }
+  }, {passive:true});
+})();
+document.addEventListener('keydown', (e)=>{
+  if(document.getElementById('gate').style.display==='none'){
+    if(e.key==='ArrowRight') goToPage(currentPage+1);
+    if(e.key==='ArrowLeft') goToPage(currentPage-1);
+  }
+});
+
+let io;
+function initScrollReveal(){
+  io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, {threshold:0.12});
+  revealPageElements(pages[0]);
+}
+function revealPageElements(pageEl){
+  if(!io) return;
+  pageEl.querySelectorAll('.reveal').forEach(el=>{
+    if(!el.classList.contains('in')) io.observe(el);
+  });
+}
+
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+function openLightbox(src){ lbImg.src = src; lightbox.style.opacity='1'; lightbox.style.visibility='visible'; }
+function closeLightbox(){ lightbox.style.opacity='0'; lightbox.style.visibility='hidden'; }
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLightbox(); });
+
+let cakeLit = false;
+function lightCandles(){
+  if(cakeLit) return;
+  cakeLit = true;
+  document.getElementById('cakeEl').classList.add('lit');
+  document.getElementById('cakeMsg').classList.add('show');
+  document.getElementById('lightBtn').setAttribute('hidden','');
+  burstConfetti();
+}
+function burstConfetti(){
+  const host = document.createElement('div');
+  host.id = 'confettiHost';
+  document.body.appendChild(host);
+  const colors = ['#F6F2E9','#1F3A5F','#7A2432','#C87F3A','#EFE6D3'];
+  for(let i=0;i<50;i++){
+    const p = document.createElement('div');
+    p.className = 'confetti-piece';
+    const w = 5 + Math.random()*6, h = 5 + Math.random()*10;
+    p.style.cssText = `left:${Math.random()*100}%;width:${w}px;height:${h}px;background:${colors[i%colors.length]};animation-duration:${2.2+Math.random()*2.2}s;animation-delay:${Math.random()*0.6}s;`;
+    host.appendChild(p);
+  }
+  setTimeout(()=>host.remove(), 5200);
+}
+</script>
+</body>
+</html>
