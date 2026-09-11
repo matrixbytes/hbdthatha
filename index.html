@@ -389,8 +389,11 @@ button{font-family:inherit;}
 </head>
 <body>
 
-<video id="bgMusic" src="./bg.mp3" loop playsinline preload="auto"
-  style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;"></video>
+<!-- FIX: switched from <video> to a plain <audio> element. On mobile Chrome/Safari,
+     an off-screen looping <video> used purely for audio is more likely to be throttled
+     or blocked than a native <audio> element, and playsinline rules that apply to
+     <video> don't help you here since there's no visible frame anyway. -->
+<audio id="bgMusic" src="./bg.mp3" loop preload="auto" style="display:none;"></audio>
 
 <div id="preloader">
   <div class="pl-ring"></div>
@@ -768,6 +771,19 @@ button{font-family:inherit;}
 </div>
 
 <script>
+/* =========================================================
+   MUSIC — rewritten for reliable mobile autoplay
+   Mobile browsers (Android Chrome + iOS Safari/Chrome, which
+   both use WebKit under Apple's rules) block ANY unmuted
+   media from playing until there is a direct, synchronous
+   user gesture (tap) that calls .play() itself. A generic
+   document-level listener that fires later is often too late
+   or too indirect on iOS in particular. Fix: call music.play()
+   directly and synchronously inside every relevant tap handler
+   (gate keypad, delete key, music toggle, cake button, page nav),
+   guarded by a "primed" flag so we don't refight it once it's
+   already playing.
+   ========================================================= */
 (function(){
   const music = document.getElementById('bgMusic');
   const btn = document.getElementById('musicToggle');
@@ -779,29 +795,28 @@ button{font-family:inherit;}
   const savedVol = parseFloat(localStorage.getItem(VOL_KEY));
   music.volume = isNaN(savedVol) ? 0.22 : savedVol;
   let musicOn = localStorage.getItem(ON_KEY) !== 'off';
+  let primed = false; // becomes true once playback has actually started at least once
 
   function setIcon(){
-    btn.textContent = musicOn ? '♪' : '♪';
     btn.classList.toggle('muted', !musicOn || music.paused);
   }
 
-  function tryPlay(){
+  function attemptPlay(){
     if(!musicOn) return;
     const p = music.play();
     if(p && typeof p.catch === 'function'){
-      p.then(()=>{ setIcon(); }).catch(()=>{
-        const resume = ()=>{
-          if(musicOn) music.play().then(setIcon).catch(()=>{});
-          document.removeEventListener('click', resume);
-          document.removeEventListener('touchstart', resume);
-          document.removeEventListener('keydown', resume);
-        };
-        document.addEventListener('click', resume, {once:true});
-        document.addEventListener('touchstart', resume, {once:true});
-        document.addEventListener('keydown', resume, {once:true});
-      });
+      p.then(()=>{ primed = true; setIcon(); }).catch(()=>{ setIcon(); });
+    } else {
+      primed = true;
     }
     setIcon();
+  }
+
+  // Called from EVERY user-gesture handler below. Cheap no-op once primed & playing.
+  function primeFromGesture(){
+    if(musicOn && (music.paused || !primed)){
+      attemptPlay();
+    }
   }
 
   music.addEventListener('ended', ()=>{
@@ -813,7 +828,7 @@ button{font-family:inherit;}
     musicOn = !musicOn;
     localStorage.setItem(ON_KEY, musicOn ? 'on' : 'off');
     if(musicOn){
-      music.play().catch(()=>{});
+      attemptPlay();
     } else {
       music.pause();
     }
@@ -822,9 +837,19 @@ button{font-family:inherit;}
 
   music.addEventListener('play', setIcon);
   music.addEventListener('pause', setIcon);
-
   setIcon();
-  tryPlay();
+
+  // Try immediately on load (works on desktop; usually blocked on mobile — that's fine,
+  // the gesture-bound calls below pick it up on first tap).
+  attemptPlay();
+
+  // Bind to every meaningful first tap in the page, in *addition* to their own
+  // click handlers elsewhere, so the very first tap the visitor makes anywhere
+  // (gate keypad, delete key, nav dots/arrows, music toggle, cake button, CTA
+  // buttons, or literally anywhere on the page) unlocks audio.
+  ['pointerdown','touchstart','click','keydown'].forEach(evt=>{
+    document.addEventListener(evt, primeFromGesture, {passive:true});
+  });
 })();
 
 (function(){
